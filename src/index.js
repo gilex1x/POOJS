@@ -1,13 +1,10 @@
-class Course {
-    constructor({
-        name,
-        classes = [],
-    }) {
-        this.name = name;
-        this.classes = classes;
-    }
-}
+//Creamos la clase de "curso"
+import Course from "./Courses.js";
+import Class from "./Class.js";
+import Student from "./Student.js";
+import LearningPath from "./LearningPath.js";
 
+//Creamos los cursos
 const cursoProgBasica = new Course({
     name: "Curso Gratis de Programación Básica",
 });
@@ -18,17 +15,7 @@ const cursoPracticoHTML = new Course({
     name: "Curso Practico de HTML y CSS",
 });
 
-
-class LearningPath {
-    constructor({
-        name,
-        courses = [],
-    }) {
-        this.name = name;
-        this.courses = courses;
-    }
-}
-
+//Creamos los Learningpaths
 const escuelaWeb = new LearningPath({
     name: "Escuela de Desarrollo Web",
     courses: [
@@ -56,30 +43,8 @@ const escuelaVgs = new LearningPath({
     ],
 })
 
-class Student {
-    constructor({
-        name,
-        email,
-        username,
-        twitter = undefined,
-        instagram = undefined,
-        facebook = undefined,
-        approvedCourses = [],
-        learningPaths = [],
-    }) {
-        this.name = name;
-        this.email = email;
-        this.username = username;
-        this.socialMedia = {
-            twitter,
-            instagram,
-            facebook,
-        };
-        this.approvedCourses = approvedCourses;
-        this.learningPaths = learningPaths;
-    }
-}
 
+//Creamos los estudiantes
 const juan2 = new Student({
     name: "JuanDC",
     username: "juandc",
@@ -90,6 +55,7 @@ const juan2 = new Student({
         escuelaVgs,
     ],
 });
+console.log(juan2);
 
 const miguelito2 = new Student({
     name: "Miguelito",
@@ -101,3 +67,4 @@ const miguelito2 = new Student({
         escuelaData,
     ],
 });
+console.log(miguelito2)
