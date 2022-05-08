@@ -3,8 +3,16 @@ class Class {
         name,
         video = ""
     }) {
-        this.name = name;
+        this._name = name;
         this.video = video;
+    }
+
+    get name() {
+        return this._name;
+    }
+
+    set name(newName) {
+        this._name = newName;
     }
 }
 
