@@ -1,4 +1,4 @@
-class Class {
+export class Class {
     constructor({
         name,
         video = ""
