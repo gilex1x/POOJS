@@ -1,4 +1,4 @@
-
+import Comment from "./Comment";
 class Student {
     constructor({
         name,
@@ -20,6 +20,13 @@ class Student {
         };
         this.approvedCourses = approvedCourses;
         this.learningPaths = learningPaths;
+    }
+    publicarComentario(content){
+        const comment = new Comment({
+            content:content,
+            studentName: this.name
+        });
+        comment.publicar();
     }
 }
 
